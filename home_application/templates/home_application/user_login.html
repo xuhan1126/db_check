@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% csrf_token %}
+    <div class="div_user_login" ng-controller="userLoginCtrl">
+        <form role="form">
+            <div class="modal-header">
+                <h4><strong style="color: white">用户登录</strong>&nbsp;&nbsp;<small style="color:red"
+                                                                                 ng-bind="msg"></small>
+                </h4>
+            </div>
+            <div class="modal-body">
+                {# padding margin参数顺序：上、右、下、左 #}
+                <div style="padding:15px 40px 10px 40px;">
+                    <input class="form-control" type="text"
+                           ng-model="username" placeholder="账号" required="required">
+                </div>
+                <div style="padding:10px 40px 15px 40px;">
+                    <input class="form-control" type="password"
+                           ng-model="password" placeholder="密码" required="required">
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <button ng-click="func_login()" type="submit" class="btn btn-success"
+                        style="width: 90px;margin-right: 5px">登 录
+                </button>
+                <button type="reset" class="btn btn-danger"
+                        style="width: 90px;margin-left: 5px">重 置
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

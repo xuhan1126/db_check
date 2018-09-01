@@ -1,0 +1,57 @@
+{% extends "app_template.html" %}
+
+{% block title %}数据库管理{% endblock %}
+{% block app_content %}
+    <div>
+        <div align="left" style="margin-left: 50px">
+            <div style="height: 70px;display: table-cell;vertical-align: middle">
+                <span class="task_list_wallpaper">
+                    <input type="button" ng-click="add_server()" class="task_list_btn btn-default" value="添加服务器">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped" style="width: 700px">
+        <thead style="text-align: center;background-color: #dddddd">
+        <td>序号</td>
+        <td>IP地址</td>
+        <td>DB类型</td>
+        <td>DB别名</td>
+        <td>用户名</td>
+        <td>操作</td>
+        </thead>
+        <tbody style="text-align: center">
+        {% for server in db_servers %}
+            <tr>
+                <td style="vertical-align: middle">{{forloop.counter}}</td>
+                <td style="vertical-align: middle">{{ server.address }}</td>
+                <td style="vertical-align: middle">{{ server.db_type }}</td>
+                <td style="vertical-align: middle">{{ server.bieming }}</td>
+                <td style="vertical-align: middle">{{ server.username }}</td>
+                <td style="vertical-align: middle">
+{#                    <button class="btn btn-sm btn-default" ng-click="edit_server({{ server.adress }},{{ server.platform }},{{ server.db_type }},{{ server.username }},{{ server.password }})">编辑</button>#}
+                    <button class="btn btn-sm btn-default" ng-click='edit_server("{{ server }}")'>编辑</button>
+                    <button class="btn btn-sm btn-danger" ng-click="delete_server({{ server.id }},'{{ server.address }}')">删除</button>
+                </td>
+            </tr>
+            {% comment %}
+        <tr ng-repeat="server in db_servers">
+            <td>[[server.pk]]</td>
+            <td>[[server.address]]</td>
+            <td>[[server.db_type]]</td>
+            <td>[[server.bieming]]</td>
+            <td>[[server.username]]</td>
+            <td>
+                <button class="btn btn-sm btn-default">编辑</button>
+                <button class="btn btn-sm btn-danger">删除</button>
+            </td>
+        </tr>
+        {% endcomment %}
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+
+{% block footer %}<a href="/task_list/">任务列表</a>{% endblock %}

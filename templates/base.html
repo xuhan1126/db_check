@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'home_application/css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home_application/css/bootstrap-theme.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home_application/css/sweetalert.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home_application/css/customer.css' %}">
+    {# 页面title #}
+    <title>{% block title %}用户登录{% endblock %}</title>
+<script type="text/javascript">
+    var views_url = "/static/home_application/views/";
+</script>
+</head>
+<body style="background-color:rgba(242, 242, 242, 1)" ng-app="db_check">
+
+{# 页面body模块 #}
+{% block content %}内容主题{% endblock %}
+{# 页面body模块结束 #}
+
+{# 引进所有的脚本文件 #}
+<script type="text/javascript" src="{% static 'home_application/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home_application/js/angular.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home_application/js/sweetalert.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'home_application/js/ui-bootstrap-tpls-0.12.0.js' %}"></script>
+<script type="text/javascript" src="{% static 'home_application/js/customer.js' %}"></script>
+<script type="text/javascript" src="{% static 'home_application/controllers/add_server.js' %}"></script>
+<script type="text/javascript" src="{% static 'home_application/controllers/edit_server.js' %}"></script>
+<script type="text/javascript" src="{% static 'home_application/controllers/task_view_detail.js' %}"></script>
+{# 脚本文件引入结束 #}
+</body>
+</html>

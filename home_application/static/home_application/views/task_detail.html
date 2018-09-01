@@ -1,0 +1,25 @@
+<div align>
+    <div class="modal-header">
+        <div style="display: inline-block;float: left;margin-left: 15px">
+            <small>巡检日期：2018-08-28 11:30</small>
+        </div>
+        <div style="display: inline-block;float: right;margin-right: 15px">
+            <small>数据库：UAP-ORACLE：192.168.103.20</small>
+        </div>
+    </div>
+    <div class="modal-body" style="margin: 10px 10px;">
+        <div style="height: 100px;border:solid 1px silver"></div>
+        <input class="form-control"/>
+        <input class="form-control"/>
+        <span ng-bind="id"></span>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-info" ng-click="task_detail_sendmail()">发送邮件</button>
+        <button class="btn btn-danger" ng-click="task_detail_cancel()">关闭窗口</button>
+    </div>
+</div>
+<style>
+    div input {
+        margin: 20px 0px 20px 0px;
+    }
+</style>

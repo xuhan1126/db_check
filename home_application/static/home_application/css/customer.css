@@ -1,0 +1,31 @@
+/* 登录框div的样式 */
+.div_user_login {
+    width: 450px;
+    height: 290px;
+    margin: auto;
+    margin-top: 120px;
+    background-color: rgba(54, 169, 206, 1);
+    /* 老的 Firefox */
+    -moz-box-shadow: 10px 10px 5px #888888;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+/*  */
+.task_list_header {
+    background-color: rgba(54, 169, 206, 1);
+    height: 90px;
+    width: 800px;
+}
+
+
+
+.task_list_wallpaper {
+    display: inline-block;
+    float: left;
+    border: solid 1px #cccccc;
+}
+
+.task_list_btn {
+    height: 28px;
+    border: none;
+}

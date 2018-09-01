@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div style="width: 450px;height: 290px;margin: auto;margin-top: 120px;background-color: rgba(54, 169, 206, 1)">
+        <form action="/account_check/" method="post">
+            <div class="modal-header">
+                <h4><strong style="color: white">用户登录</strong>&nbsp;&nbsp;<small style="color:red">{{ warn }}</small>
+                </h4>
+            </div>
+            {% csrf_token %}
+            <div class="modal-body">
+                {# padding margin参数顺序：上、右、下、左 #}
+                <div style="padding:15px 40px 10px 40px;">
+                    <input class="form-control" type="text"
+                           name="username" required="required" placeholder="账号">
+                </div>
+                <div style="padding:10px 40px 15px 40px;">
+                    <input class="form-control" type="password"
+                           name="password" required="required" placeholder="密码">
+                </div>
+            </div>
+            <div class="modal-footer" style="text-align: center;">
+                <input type="submit" class="btn btn-success"
+                       style="width: 90px;margin-right: 5px" value="登 录">
+                <input type="reset" class="btn btn-warning"
+                       style="width: 90px;margin-left: 5px" value="重 置">
+            </div>
+        </form>
+    </div>
+{% endblock %}

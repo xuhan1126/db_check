@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}任务列表{% endblock %}
+{% block content %}
+<div class="container task_list_header">
+    <div class="">
+        <h3 style="padding: 35px 20px;color: white;">
+            <strong >东莞移动数据库健康巡检</strong>
+        </h3>
+    </div>
+    <div style="border: 1px gray solid;height: 500px">
+        <table class="table table-bordered">
+            <thead style="background-color: #8c8c8c">
+            <td>任务ID</td>
+            <td>出发时间</td>
+            <td>执行状态</td>
+            <td>结果明细</td>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td ng-click="task_detail(p)">明细</td>
+                <td><a href="/user_logout/">退出</a></td>
+                <td><a href="/db_manage/">后台管理</a></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="4" height="20" align="right">
+                    <div style="display: inline;margin: 0px 5px 0px 5px">
+                        首页
+                    </div>
+                    <div style="display: inline;margin: 0px 5px 0px 5px">
+                        上一页
+                    </div>
+                    <div style="display: inline;margin: 0px 5px 0px 5px">
+                        下一页
+                    </div>
+                    <div style="display: inline-block;margin: 0px 5px 0px 5px">
+                        尾页
+                    </div>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+        <label></label>
+    </div>
+    <div align="center" style="margin: 5px;color: #8c8c8c;width: 100%">
+        <div class="col-lg-11" style="display: inline-block">
+            Copyright @ 2018 东莞移动·<a href="http://www.canway.net" target="_blank">广州嘉为</a> 技术支持
+        </div>
+        <div class="col-lg-1" style="display: inline-block" align="right">
+            返回
+        </div>
+    </div>
+</div>
+{% endblock %}

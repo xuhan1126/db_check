@@ -1,0 +1,96 @@
+{% extends "app_template.html" %}
+{% block title %}任务列表{% endblock %}
+
+{% block app_content %}
+    <div>
+        <div align="left" style="margin-left: 50px">
+            <div style="height: 70px;display: table-cell;vertical-align: middle">
+                <span class="task_list_wallpaper" style="border-right: none">
+                    <select class="task_list_btn">
+                        {% for server in server_list_options %}
+                        <option value="{{ server.bieming }}">{{ server.bieming }}</option>
+                        {% comment %}
+                        <option value="1">UAP-Oracle-192.168.103.120</option>
+                        <option value="1">IAP-MSSQL-10.252.63.128</option>
+                        {% endcomment %}
+                        {% endfor %}
+                    </select>
+                </span>
+                <span class="task_list_wallpaper">
+                    <input type="button" class="task_list_btn btn-default" value="触发任务">
+                </span>
+            </div>
+        </div>
+        <table class="table table-bordered table-striped" style="width: 700px">
+            <thead style="text-align: center;background-color: #dddddd">
+            <td>任务ID</td>
+            <td>触发时间</td>
+            <td>执行状态</td>
+            <td>结果明细</td>
+            </thead>
+            <tbody style="text-align: center;vertical-align: middle">
+            <tr>
+                <td>1</td>
+                <td>2018/08/27 19:30</td>
+                <td>任务完成</td>
+                <td>查看</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2018/08/27 19:30</td>
+                <td>任务完成</td>
+                <td>查看</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2018/08/27 19:30</td>
+                <td>任务完成</td>
+                <td>
+                    <button class="btn btn-xs btn-default" ng-click="task_view()">查看</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>2018/08/27 19:30</td>
+                <td>任务完成</td>
+                <td>查看</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>2018/08/27 19:30</td>
+                <td>任务完成</td>
+                <td>查看</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>2018/08/27 19:30</td>
+                <td>任务完成</td>
+                <td>查看</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>2018/08/27 19:30</td>
+                <td>任务完成</td>
+                <td>查看</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>2018/08/27 19:30</td>
+                <td>任务完成</td>
+                <td>查看</td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <div style="display:inline-block;margin: 0px 10px 0px 10px">首页</div>
+                    <div style="display:inline-block;margin: 0px 10px 0px 10px">上一页</div>
+                    <div style="display:inline-block;margin: 0px 10px 0px 10px">下一页</div>
+                    <div style="display:inline-block;margin: 0px 10px 0px 10px">尾页</div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
+
+{% block footer %}<a href="/db_manage/">管理后台</a>{% endblock %}
